@@ -6,13 +6,13 @@ on:
 
 jobs:
   debug_build:
-  runs-on: ubuntu-latest
-
-  steps:
-  - name: Checkout repos
-    uses: actions/checkout@v4
-  - name: Run build tasks
-    run: |
-      chmod +x ./gradlew
-      ./gradlew :module:assembleDebug
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: Checkout repos
+      uses: actions/checkout@v4
+    - name: Run build tasks
+      run: |
+        chmod +x ./gradlew
+        ./gradlew :module:assembleDebug
       
