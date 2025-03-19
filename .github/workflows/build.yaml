@@ -14,5 +14,5 @@ jobs:
     - name: Run build tasks
       run: |
         chmod +x ./gradlew
-        ./gradlew :module:assembleDebug
+        ./gradlew :module:assemble
       
