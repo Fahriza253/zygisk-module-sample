@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    namespace 'zygisk.module.sample'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 35
+    }
+
     externalNativeBuild {
         ndkBuild {
             path("jni/Android.mk")
