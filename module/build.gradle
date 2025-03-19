@@ -9,11 +9,24 @@ android {
     defaultConfig {
         minSdk 24
         targetSdk 35
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++17'
+            }
+        }
     }
 
     externalNativeBuild {
-        ndkBuild {
-            path("jni/Android.mk")
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.22.1'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
 }
